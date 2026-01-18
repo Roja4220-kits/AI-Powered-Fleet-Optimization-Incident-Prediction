@@ -106,7 +106,7 @@ Optimization techniques:
 
 ---
 ## **How to Execute the Project (Notebook + Multi-Terminal Execution)**
-his project is designed to automatically generate its full folder structure and Python modules by executing a single Jupyter Notebook, followed by running individual system components in parallel terminals.
+This project is designed to automatically generate its full folder structure and Python modules by executing a single Jupyter Notebook, followed by running individual system components in parallel terminals.
 
 **Step 1: Create Project Folder in Jupyter**
 
