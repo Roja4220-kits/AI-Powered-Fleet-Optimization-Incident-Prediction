@@ -248,24 +248,20 @@ Driver behavior alerts
 ---
 
 
-## 🔄 **Execution Flow**
+## 🔄 Execution Flow
 
-Notebook (Auto File Creation)
-        |
-        v
-Real-Time Data Stream
-        |
-        v
-Incident Prediction
-        |
-        v
-Fleet Optimization
-        |
-        v
-Dynamic Rerouting
-        |
-        v
+Notebook → Auto File Creation  
+⬇️  
+Real-Time Data Stream  
+⬇️  
+Incident Prediction  
+⬇️  
+Fleet Optimization  
+⬇️  
+Dynamic Rerouting  
+⬇️  
 Live Monitoring Dashboard
+
 
 
 ---
