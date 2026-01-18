@@ -105,10 +105,10 @@ Optimization techniques:
 - Prediction confidence logging
 
 ---
-**How to Execute the Project (Notebook + Multi-Terminal Execution)**
+## **How to Execute the Project (Notebook + Multi-Terminal Execution)**
 his project is designed to automatically generate its full folder structure and Python modules by executing a single Jupyter Notebook, followed by running individual system components in parallel terminals.
 
-Step 1: Create Project Folder in Jupyter
+**Step 1: Create Project Folder in Jupyter**
 
 Open Jupyter Notebook (Anaconda Navigator)
 
@@ -119,7 +119,7 @@ AI-Powered-Fleet-Optimization-Incident-Prediction
 
 Open this folder.
 
-Step 2: Upload and Run the Notebook
+**Step 2: Upload and Run the Notebook**
 
 Upload the Jupyter Notebook file available in this repository:
 
@@ -141,17 +141,20 @@ AI-Powered-Fleet-Optimization-Incident-Prediction/
 
 No manual folder or file creation is required after this step.
 
-Step 3: Open Anaconda Prompt (Multiple Terminals)
+**Step 3: Open Anaconda Prompt (Multiple Terminals)**
 
 Open 5 separate Anaconda Prompt terminals (Terminal 1 to Terminal 5).
 
-🚀 Phase-wise Execution (Parallel Terminals,creates csv files internally and updates continuously)
-🔹 Terminal 1: Train Incident Prediction Models
+**🚀 Phase-wise Execution (Parallel Terminals,creates csv files internally and updates continuously)**
+
+**🔹 Terminal 1: Train Incident Prediction Models**
+
 cd AI-Powered-Fleet-Optimization-Incident-Prediction
+
 python phase2_incident_prediction/train_incident_models.py
 
 
-(Output):
+**(Output):**
 
 Trains Random Forest, XGBoost, CatBoost, and LSTM/GRU models
 
@@ -159,12 +162,14 @@ Saves trained models into the models/ folder
 
 Displays training accuracy and evaluation metrics
 
-🔹 Terminal 2: Start Real-Time Data Generator
+**🔹 Terminal 2: Start Real-Time Data Generator**
+
 cd AI-Powered-Fleet-Optimization-Incident-Prediction
+
 python phase1_realtime_stream/data_generator.py
 
 
-(Output):
+**(Output):**
 
 Simulates live GPS, vehicle health, driver behavior, traffic, and weather data
 
@@ -172,12 +177,14 @@ Continuously streams real-time fleet data
 
 Acts as the data source for live prediction
 
-🔹 Terminal 3: Run Live Incident Prediction (Inference)
+**🔹 Terminal 3: Run Live Incident Prediction (Inference)**
+
 cd AI-Powered-Fleet-Optimization-Incident-Prediction
+
 python phase1_realtime_stream/phase2_live_inference.py
 
 
-(Output):
+**(Output):**
 
 Consumes real-time streamed data
 
@@ -185,12 +192,14 @@ Generates live incident risk predictions
 
 Sends prediction results to downstream modules
 
-🔹 Terminal 4: Execute Fleet Optimization Engine
+**🔹 Terminal 4: Execute Fleet Optimization Engine**
+
 cd AI-Powered-Fleet-Optimization-Incident-Prediction
+
 python phase3_fleet_optimization/fleet_optimizer.py
 
 
-(Output):
+**(Output):**
 
 Optimizes vehicle-to-task assignments
 
@@ -198,12 +207,14 @@ Minimizes fuel cost, delay, and idle time
 
 Produces optimized fleet schedules
 
-🔹 Terminal 5: Run Dynamic Rerouting System
+**🔹 Terminal 5: Run Dynamic Rerouting System**
+
 cd AI-Powered-Fleet-Optimization-Incident-Prediction
+
 python phase4_dynamic_rerouting/dynamic_rerouting.py
 
 
-(Output):
+**(Output):**
 
 Detects high-risk routes based on predictions
 
@@ -211,16 +222,18 @@ Automatically reroutes affected vehicles
 
 Updates ETA and logs rerouting events
 
-🔹 Terminal 6 : Launch Dashboard
+**🔹 Terminal 6 : Launch Dashboard**
+
 cd AI-Powered-Fleet-Optimization-Incident-Prediction
+
 streamlit run phase5_dashboard/dashboard.py
 
 
-(Output):
+**(Output):**
 
 Launches interactive dashboard in browser
 
-Displays:
+**Displays:**
 
 Live GPS tracking
 
@@ -233,19 +246,28 @@ Dynamic route suggestions
 Driver behavior alerts
 
 ---
-**🧠Execution Flow Summary**
 
-Notebook → Auto File Creation
-        ↓
+
+## 🔄 **Execution Flow**
+
+Notebook (Auto File Creation)
+        |
+        v
 Real-Time Data Stream
-        ↓
+        |
+        v
 Incident Prediction
-        ↓
+        |
+        v
 Fleet Optimization
-        ↓
+        |
+        v
 Dynamic Rerouting
-        ↓
+        |
+        v
 Live Monitoring Dashboard
+
+
 ---
 
 ⚠️ **Important Notes**
